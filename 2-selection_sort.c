@@ -20,7 +20,7 @@ void selection_sort(int *array, size_t size)
 {
 	size_t minidx, i, j;
 
-	if (!array || !size || size < 2)
+	if (!array || size < 2)
 		return;
 
 	for (i = 0; i < size - 1; i++)
@@ -32,12 +32,12 @@ void selection_sort(int *array, size_t size)
 			{
 				minidx = j;
 			}
-			if (minidx != i)
-			{
-				/* code */
-				swap_ints(&array[minidx], &array[i]);
-				print_array(array, size);
-			}
+		}
+		if (minidx != i)
+		{
+			/* code */
+			swap_ints(&array[minidx], &array[i]);
+			print_array(array, size);
 		}
 	}
 }
