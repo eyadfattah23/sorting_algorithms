@@ -92,7 +92,7 @@ void cocktail_sort_list(listint_t **list)
 			break;
 
 		flag = 0;
-		for (i = end; i != start->prev && i; i = i->prev)
+		for (i = end; i != start && i; i = i->prev)
 		{
 			while (i->prev && i->n < i->prev->n)
 			{
