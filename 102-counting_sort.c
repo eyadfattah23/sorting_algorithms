@@ -9,6 +9,9 @@ void counting_sort(int *array, size_t size)
 	int *output = malloc(sizeof(int) * size), *count;
 	size_t i, max_val = array[0];
 
+	if (!array || !array[0] || !size || size < 2)
+		return;
+
 	if (!output)
 		return;
 
